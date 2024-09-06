@@ -9,22 +9,8 @@ import java.util.Scanner;
 class Patterns{
     
     static void pattern(int n){
-
-        int space = 0;
-        for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= n-i+1; j++) {
-                System.out.print(j + " ");
-            }
-            for (int j = 0; j < space; j++) {
-                System.out.print("  ");
-            }
-            space += 2;
-            for(int j = n-i+1; j >= 1; j--){
-                System.out.print(j + " ");
-            }
-            System.out.println();
-        }
-        space = (n*2) - 2;
+        
+        int space = (n*2) - 2;
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= i; j++) {
                 System.out.print(j + " ");
@@ -39,6 +25,21 @@ class Patterns{
             System.out.println();
         }
 
+        space = 0;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n-i+1; j++) {
+                System.out.print(j + " ");
+            }
+            for (int j = 0; j < space; j++) {
+                System.out.print("  ");
+            }
+            space += 2;
+            for(int j = n-i+1; j >= 1; j--){
+                System.out.print(j + " ");
+            }
+            System.out.println();
+        }
+        
     }
 
     public static void main(String[] args){
